@@ -17,7 +17,6 @@ export default function Home() {
   }
 
   const products = data.products.data
-  console.log(products)
 
   return (
     <div>
@@ -27,7 +26,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Next JS</h1>
         <Gallery>
           {products.map((product) => (
             <Product key={product.attributes.slug} product={product} />
