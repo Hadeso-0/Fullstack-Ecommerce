@@ -22,7 +22,7 @@ export default function ProductDetails() {
   const { data, fetching, error } = result
 
   // Import Context StateContext
-  const { qty, increaseQty, decreaseQty } = useStateContext()
+  const { qty, increaseQty, decreaseQty, onAdd } = useStateContext()
 
   if (fetching) {
     return <p>Fetching...</p>
@@ -49,7 +49,9 @@ export default function ProductDetails() {
             <AiFillPlusCircle />
           </button>
         </Quantity>
-        <Buy>Add to cart</Buy>
+        <Buy onClick={() => onAdd(data.products.data[0].attributes, qty)}>
+          Add to cart
+        </Buy>
       </ProductInfo>
     </DetailsStyle>
   )

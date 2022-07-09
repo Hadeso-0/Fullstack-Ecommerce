@@ -28,6 +28,7 @@ export const Quantity = styled.div`
     border: none;
     display: flex;
     font-size: 1.5rem;
+    padding: 0 0.5rem;
   }
   p {
     width: 1rem;
@@ -45,4 +46,6 @@ export const Buy = styled.button`
   background: var(--primary);
   color: white;
   font-weight: 500;
+  border: none;
+  outline: none;
 `
