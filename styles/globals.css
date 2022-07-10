@@ -8,12 +8,12 @@ body {
     background: #f1f1f1;
     --primary: #2d2d2d;
     --secondary: #535353;
+    margin: 0 4%;
 }
 #__next{
   min-height:100vh;
 }
 body{
-  margin: 0 4%;
   min-height: 100vh;
   width: 92%;
 }
@@ -39,4 +39,23 @@ a {
 
 p{
   line-height:140%;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
