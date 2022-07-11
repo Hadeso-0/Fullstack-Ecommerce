@@ -4,8 +4,16 @@ export const DetailsStyle = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
+`
+export const ProductImage = styled.div`
+  width: 35%;
+  height: 0;
+  padding-bottom: 35%;
+  overflow: hidden;
   img {
-    width: 40%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 `
 export const ProductInfo = styled.div`

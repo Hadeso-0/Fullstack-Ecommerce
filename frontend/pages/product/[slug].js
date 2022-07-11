@@ -6,6 +6,7 @@ import {
   ProductInfo,
   Quantity,
   Buy,
+  ProductImage,
 } from '../../styles/ProductDetails'
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai'
 import { useStateContext } from '../../lib/context'
@@ -35,7 +36,9 @@ export default function ProductDetails() {
 
   return (
     <DetailsStyle>
-      <img src={image.data.attributes.formats.medium.url} alt={title} />
+      <ProductImage layoutId={title}>
+        <img src={image.data.attributes.formats.medium.url} alt={title} />
+      </ProductImage>
       <ProductInfo>
         <h3>{title}</h3>
         <p>{description}</p>

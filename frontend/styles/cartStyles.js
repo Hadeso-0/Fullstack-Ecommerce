@@ -16,9 +16,8 @@ export const CartWrapper = styled(motion.div)`
 `
 
 export const CartStyle = styled(motion.div)`
-  min-width: 40%;
   background: #f1f1f1;
-  padding: 2rem 4rem;
+  padding: 2rem;
   overflow-y: auto;
   position: relative;
 `
@@ -50,10 +49,9 @@ export const CardInfo = styled(motion.div)`
   }
 `
 export const EmptyStyle = styled(motion.div)`
-  position: absolute;
+  position: relative;
   top: 0;
   height: 100%;
-  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
