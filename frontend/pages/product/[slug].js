@@ -10,6 +10,7 @@ import {
 } from '../../styles/ProductDetails'
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai'
 import { useStateContext } from '../../lib/context'
+import toast from 'react-hot-toast'
 
 export default function ProductDetails() {
   const { query } = useRouter()
@@ -33,7 +34,9 @@ export default function ProductDetails() {
   }
 
   const { title, description, image } = data.products.data[0].attributes
-
+  const notify = () => {
+    toast.success(`${title} added to your cart`, { duration: 1500 })
+  }
   return (
     <DetailsStyle>
       <ProductImage layoutId={title}>
